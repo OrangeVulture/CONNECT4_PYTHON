@@ -2,7 +2,7 @@
 	Connect-4 the game using Python.
 	GUI menu basics to be implemented. (✔)
 	GUI menu yet to be merged with the main program.
-	Stopping as I'll be going to church tomorrow and so need to start something with AOA(won't do it today anyways, but will get 	motivation to study tomorrow)
+	Stopping as I'll be going to church tomorrow and so need to start something with AOA(won't do it today anyways, but will get motivation to study tomorrow)
 	Comments not added for the gui.py as I was in a hurry. Will be adding later. 
 	First, I was thinking tkinter has to be used so as to make a menu. Then it clicked maybe pygame(current library on which the 	entire game is made on) could be used to make a GUI menu. So I learnt from this guy. 
 	LINK:
