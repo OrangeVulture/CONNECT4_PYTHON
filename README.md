@@ -5,6 +5,7 @@
 	 -PLAY & EXIT working without any issues.
 	 -Imported os library to use a funtion called environ to place the window at the center of the display. 
 	 -INSTRUCTIONS and CREDITS yet to be made working.
+	 - One bug, After user presses PLAY, CONNECT-4 MENU still appears in the area where there is black box. Small bug. Will be rectified. 
 	 
 	 
 	 WARNING: When opening gui.py some code has been altered with convienience to connect4.py. Hence when any button pressed would exit with an error. File just for reference for gui menu.
