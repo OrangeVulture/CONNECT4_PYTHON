@@ -2,6 +2,8 @@
 	Connect-4 the game using Python.
 	Updates and future updates
 	 -Imported os library to use a funtion called environ to place the window at the center of the display screen as pygame has no option to do it. 
+	 -Added functions for buttons. 4 buttons placed for now.
+	 -Buttons yet to be made working. As in, the button doesn't respond in any way when clicked.
 	 -GUI menu yet to be merged with the main program.
 	
 	Comments not added for the gui.py as of now. Will be adding later when merged with the main file or would try adding if I get time.
