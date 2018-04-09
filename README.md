@@ -1,11 +1,20 @@
 # CONNECT4_PYTHON
 	Connect-4 the game using Python.
 	Updates and future updates
+	 -New File added. instructions.py. It is kind of a complicated code because pygame library dosn't allow multiline rendering easily. Copied and edited from some xda site.
+	 -GAME is 99% working and good except for suggestions and final touchup and comments.
 	 -GUI menu merged with the main program.
 	 -PLAY & EXIT working without any issues.
+	 -INSTRUCTIONS and CREDITS are working as well.
+	 -INSTRUCTIONS has a back button to goto main menu.
 	 -Imported os library to use a funtion called environ to place the window at the center of the display. 
-	 -INSTRUCTIONS and CREDITS yet to be made working.
-	 - One bug, After user presses PLAY, CONNECT-4 MENU still appears in the area where there is black box. Small bug. Will be rectified. 
+	 
+	 BUG BOUNTY PROGRAM:
+	 	THE GAME(NOT THE CODE) HAS A BUG(more of a loophole). HUNTER WILL RECIEVE FREE SUTTA SUPPLY FOR A YEAR FROM TEJESH. HONESTLY, ANYONE FINDS IT IS GREAT. I FOUND IT RANDOMNLY WHILE PLAYING. WILL TRY TO FIX IT IF TIME PERMITS.
+	
+	
+	IF ANYONE WANTS TO CHANGE SOMETHING, PLEASE CONVEY IT TO ME or TRY DOING IT YOURSELF.
+	
 	 
 	 
 	 WARNING: When opening gui.py some code has been altered with convienience to connect4.py. Hence when any button pressed would exit with an error. File just for reference for gui menu.
