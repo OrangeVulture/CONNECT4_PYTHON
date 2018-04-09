@@ -1,11 +1,14 @@
 # CONNECT4_PYTHON
 	Connect-4 the game using Python.
 	Updates and future updates
-	 -Imported os library to use a funtion called environ to place the window at the center of the display screen as pygame has no option to do it. 
-	 -Added functions for buttons. 4 buttons placed for now.
-	 -Buttons yet to be made working. As in, the button doesn't respond in any way when clicked.
-	 -GUI menu yet to be merged with the main program.
-	
+	 -GUI menu merged with the main program.
+	 -PLAY & EXIT working without any issues.
+	 -Imported os library to use a funtion called environ to place the window at the center of the display. 
+	 -INSTRUCTIONS and CREDITS yet to be made working.
+	 
+	 
+	 WARNING: When opening gui.py some code has been altered with convienience to connect4.py. Hence when any button pressed would exit with an error. File just for reference for gui menu.
+	 
 	Comments not added for the gui.py as of now. Will be adding later when merged with the main file or would try adding if I get time.
 	
 	For me, in Windows 10, the python folder by default is at C:\Users\USERNAME\Appdata\Local\Programs\Python\Scripts
@@ -27,7 +30,6 @@
 	and run those commands
 	
 	Not sure if these methods would work or not, but the first one works 100%.
-		
 	Both libraries are not installed by default.
 	
 	WHERE I LEARNT HOW TO DESIGN A PYGAME MENU
