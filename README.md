@@ -16,6 +16,18 @@
 		
 		pip install numpy
 		
+	OR 
+	
+	TRY opening Python shell and type in those commands. 
+	
+	OR
+	
+	TRY opening cmd, type in 
+		python
+	and run those commands
+	
+	Not sure if these methods would work or not, but the first one works 100%.
+		
 	Both libraries are not installed by default.
 	
 	WHERE I LEARNT HOW TO DESIGN A PYGAME MENU
