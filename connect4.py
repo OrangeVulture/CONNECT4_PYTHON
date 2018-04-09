@@ -20,8 +20,9 @@ GREY = (211,211,211)
 #PROGRAM CONSTANTS
 ROW = 6
 COLUMN = 7
+FPS = 30			#FOR clock - FOR INSTRUCTIONS
 
-#
+#PROGRAM INITIALIZATIONS
 os.environ['SDL_VIDEO_CENTERED'] = '1'					#To position the pygame window at the center
 SQUARESIZE = 100
 width = COLUMN * SQUARESIZE
@@ -29,6 +30,7 @@ height = (ROW+1) * SQUARESIZE				#+1 FOr DISPLAY SCREEN which shows where the ch
 RADIUS = int(SQUARESIZE/2 -5)
 size = (width, height)
 screen = pygame.display.set_mode(size)
+clock = pygame.time.Clock()
 
 display_width = 800
 display_height = 600
@@ -107,11 +109,22 @@ def button(msg, x, y, w, h, ic, ac, act="NONE"):
 		pygame.draw.rect(screen, ac, (x,y,w,h))      #gameDisplay
 		if(click[0] == 1 and act != "NONE"):
 			if(act == "PLAY"):
+				pygame.draw.rect(screen, BLACK, (0, 0, width, SQUARESIZE))				#Small_bug, To HIde Connect-4 TEXT in the Black rect area until mouse is not updated
 				game_loop()
 			elif(act == "INST"):
-				pass
+				text="             INSTRUCTIONS\nSummary:\nIf your looking for a simple strategy game that can be played with just " \
+					"about anyone, including young children, Connect Four is for you. \nConnect Four is a " \
+				    "simple game similar to Tic-Tac-Toe. \nOnly instead of three in a row, the winner must " \
+				    "connect four in a row. \nDue to the nature of the game setup, Connect Four is a little more "\
+				    "hands on and fun for younger kids to drop their checkers down the slots. \nConnect Four is a simple "\
+				    "and fun two player game that only takes minutes to finish. "\
+				    "\nObject:\nTo win Connect Four you must be the first player to get four of your colored checkers in a "\
+				    "row either horizontally, vertically or diagonally."
+				instructions(clock, screen, text)
 			elif(act == "CRED"):
-				pass
+				credits()
+			elif(act == "BACK"):
+				game_intro()
 			elif(act == "EXIT"):
 				pygame.quit()
 				quit()
@@ -121,6 +134,65 @@ def button(msg, x, y, w, h, ic, ac, act="NONE"):
 	textSurface, textRect = text_objects(msg,mybut)
 	textRect.center = (x+(w/2),y+(h/2))
 	screen.blit(textSurface, textRect) 				#gameDisplay
+
+
+def blit_text(surface, text, pos, font, color=pygame.Color('black')):						#FOR INSTRUCTIONS
+    words = [word.split(' ') for word in text.splitlines()]  # 2D array where each row is a list of words.
+    space = font.size(' ')[0]  # The width of a space.
+    max_width, max_height = surface.get_size()
+    x, y = pos
+    for line in words:
+        for word in line:
+            word_surface = font.render(word, 0, color)
+            word_width, word_height = word_surface.get_size()
+            if x + word_width >= max_width:
+                x = pos[0]  # Reset the x.
+                y += word_height  # Start on new row.
+            surface.blit(word_surface, (x, y))
+            x += word_width + space
+        x = pos[0]  # Reset the x.
+        y += word_height  # Start on new row.
+
+
+def instructions(clock, screen, text ):
+    font = pygame.font.SysFont('Monospace', 25)
+    while True:
+
+        dt = clock.tick(FPS) / 1000
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                quit()
+
+        screen.fill(GREY)
+        blit_text(screen, text, (20, 20), font)
+        button("BACK",300,600,100,50,red, RED, "BACK")
+        pygame.display.update()
+
+
+
+
+def credits():
+	screen.fill(GREY)
+	message_display("CREDITS",100)
+	message_display("AHAN",300)
+	message_display("FREDDY",375)
+	message_display("JITHIN",450)
+	message_display("JOSEPH",525)
+	message_display("VAIBHAV",600)
+
+
+
+def message_display(text, y):
+    myfont = pygame.font.SysFont("Monospace",75)
+    TextSurf, TextRect = text_objects(text, myfont)
+    TextRect.center = ((width/2),y)
+    screen.blit(TextSurf, TextRect)
+    pygame.display.update()
+    time.sleep(2)
+
+
+
 
 
 def text_objects(text, font):
@@ -133,10 +205,8 @@ def game_intro():
 	pygame.init()
 
 	intro = True
-	clock = pygame.time.Clock()
+	
 	myfont = pygame.font.SysFont("Monospace",75)
-
-	# os.environ['SDL_VIDEO_CENTERED'] = '1'					#To position the pygame window at the center
 
 	
 	
@@ -161,7 +231,7 @@ def game_intro():
 		button("EXIT",280,500,140,70, red, RED,"EXIT")
 
 		pygame.display.update()
-		clock.tick(5)
+		# clock.tick(5)
 
 
 
@@ -173,10 +243,6 @@ def game_loop():						#Function in loop to run the game
 
 	board = create_board()                 		#Initialise the board(First time)
 	print_board(board)				
-
-	
-
-	pygame.display.update()
 	draw_board(board)
 	pygame.display.update()
 
@@ -245,6 +311,7 @@ def game_loop():						#Function in loop to run the game
 
 				if game_over:
 					pygame.time.wait(3000)
+
 
 				
 
