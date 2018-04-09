@@ -1,7 +1,8 @@
-import numpy as np
-import pygame
-import sys
-import math
+import numpy as np 			#Using flip funtion, to flip the board
+import pygame				#Main game runs with this library
+import sys 					#sys.exit()
+import math 				#For floor function
+import os 					#For environ function, to position window at center
 
 ROW = 6
 COLUMN = 7
@@ -72,6 +73,8 @@ print_board(board)
 game_over = False 							#Game_Flag 
 turn = 0									#Player_Flag 
 draw_game = int(0)							#DRAW GAME CHECK
+
+os.environ['SDL_VIDEO_CENTERED'] = '1'				#To position the pygame window at the center
 
 pygame.init()
 
