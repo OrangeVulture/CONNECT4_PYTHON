@@ -18,6 +18,7 @@ Both libraries are not installed by default.
 WHERE I LEARNT HOW TO DESIGN A PYGAME MENU
 LINK:
 https://www.youtube.com/playlist?list=PLQVvvaa0QuDdLkP8MrOXLe_rKuf6r80KO
+
 Start from video 1 to understand from basics of pygame library or video 10 to start from how to create a menu.
 	
 WHERE I LEARNT THE LOGIC FOR THE GAME
