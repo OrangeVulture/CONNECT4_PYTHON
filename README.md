@@ -5,9 +5,9 @@ Libraries used: pygame and numpy(make sure both of these are installed)
 Run connect4.py for the game.
 	
 	 
-WARNING: When opening gui.py code has been altered with convienience to connect4.py. Hence when any button pressed would exit with an error. File just for reference for gui menu.
+WARNING: When opening gui.py code has been altered with convienience to connect4.py. Hence when any button pressed would exit with an error. File just for reference for GUI menu.
 
-Open up cmd at the described directory(Python\Scripts) and type
+Open up cmd at the and type
 	
 	pip install pygame
 		
